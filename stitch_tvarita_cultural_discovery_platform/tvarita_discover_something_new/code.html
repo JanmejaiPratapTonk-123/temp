@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tvarita - Discover</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#9d422b",
+                      "surface-container": "#f0eee9",
+                      "on-surface-variant": "#44474d",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#031632",
+                      "tertiary-fixed": "#ffdcbe",
+                      "surface": "#fbf9f4",
+                      "on-tertiary-fixed-variant": "#6a3c00",
+                      "primary-fixed-dim": "#b6c7eb",
+                      "surface-bright": "#fbf9f4",
+                      "background": "#fbf9f4",
+                      "surface-container-low": "#f5f3ee",
+                      "secondary-fixed-dim": "#ffb4a2",
+                      "on-secondary-fixed-variant": "#7e2b16",
+                      "on-tertiary-fixed": "#2d1600",
+                      "surface-dim": "#dbdad5",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e4e2dd",
+                      "surface-variant": "#e4e2dd",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#374765",
+                      "on-tertiary-container": "#cc822f",
+                      "on-secondary-container": "#74240f",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4e5f7e",
+                      "on-primary-fixed": "#081b38",
+                      "outline-variant": "#c5c6ce",
+                      "on-background": "#1b1c19",
+                      "on-error-container": "#93000a",
+                      "outline": "#75777e",
+                      "primary-fixed": "#d7e2ff",
+                      "primary-container": "#1a2b48",
+                      "tertiary-fixed-dim": "#ffb871",
+                      "inverse-surface": "#30312e",
+                      "on-surface": "#1b1c19",
+                      "secondary-fixed": "#ffdbd2",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#261200",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#fd8c6f",
+                      "on-primary-container": "#8293b5",
+                      "inverse-primary": "#b6c7eb",
+                      "tertiary-container": "#432400",
+                      "on-secondary-fixed": "#3c0800",
+                      "surface-container-high": "#eae8e3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "container-max": "1440px",
+                      "gutter": "32px",
+                      "unit": "8px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-caps": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "button": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .image-zoom-hover:hover img {
+            transform: scale(1.02);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-zoom-hover img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .text-offset-overlap {
+            margin-top: -3rem;
+            margin-left: -2rem;
+            position: relative;
+            z-index: 10;
+        }
+        @media (max-width: 768px) {
+            .text-offset-overlap {
+                margin-top: -1.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-primary/80 backdrop-blur-md font-label-caps text-label-caps fixed top-0 w-full z-50 bg-transparent flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto hidden md:flex">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed flex items-center gap-2 scale-95 active:scale-90 transition-transform" href="#">
+<img alt="Tvarita Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+            Tvarita
+        </a>
+<div class="flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary hover:text-secondary transition-colors duration-300" href="#">Explore</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">My Journey</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform text-on-surface-variant hover:text-secondary duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<button class="scale-95 active:scale-90 transition-transform">
+<img class="h-8 w-8 rounded-full object-cover" data-alt="A small, circular, minimalist user profile portrait avatar icon, subtle natural lighting, modern editorial style, set against a pristine white background. High-quality digital render reflecting a high-end cultural digital archive vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtWO13FG11yi1SzCiATIgzNgMYsZDySAvp3BF-A07q91gWm5c66mqvn0WMWipl7vtkdblNfs_ecF4PcYpOlVEF4j7nEDlK6-Ctvd6pJPWvm5XM4OOYbJ6QOEfNLfEqtOFhZVyaWbEzbx_CShnMAQUJf5dIr_uI0yp89ma0MxU7mjp-gLrgPR98349ZiHGa7Tnz-drG8NAMtEwVysw1PKFJ0BGlac1nBhvtueQpZheolFxa4dUh9NNn"/>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-24 max-w-container-max mx-auto overflow-hidden">
+<!-- Hero Section (Immersive, asymmetric layout) -->
+<section class="px-margin-mobile md:px-margin-desktop mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex flex-col gap-8 z-10">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary leading-tight">
+                        Discover something you didn’t know existed.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Explore India’s living traditions, the artists behind them, and the stories that deserve to be seen.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="bg-primary text-on-primary font-button text-button px-6 py-4 rounded hover:bg-primary-container transition-colors duration-300 shadow-sm flex items-center justify-center gap-2">
+                            Explore traditions <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-transparent border-[1.5px] border-on-surface text-on-surface font-button text-button px-6 py-4 rounded hover:bg-surface-container transition-colors duration-300 flex items-center justify-center gap-2">
+                            ✦ Surprise me
+                        </button>
+</div>
+</div>
+<div class="md:col-span-7 relative h-[600px] w-full mt-12 md:mt-0">
+<!-- Layered Imagery -->
+<div class="absolute top-0 right-0 w-3/4 h-5/6 overflow-hidden rounded-lg image-zoom-hover shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A striking high-resolution photograph of a vibrant Chhau dancer in full ornate mask and costume mid-pose, dramatic studio lighting against a deep indigo background, modern editorial museum aesthetic, capturing intense cultural energy and movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWg_2TNe6AGyzcHl8fS124OdGE9JAFzfrICLgExWmtnvR2TB84gDeKIEh4h3m_e-gXbd89hogbDCCkL4qsgUlF5AXRKczYrDjH-L91HJ953lfy3k8sPC8kRjBPOu0ZPlC8QkLPvqOVj_ZVfzYyo8kPXO23-Ju2b50ZEWZ395pMm444H_zSuNdv__rG1TBl_DpX2MHLtrgb790gKjMpJyRB04Xpa3KJgbJ8OqrLGR_lYQtCdMD74Yz2"/>
+</div>
+<div class="absolute bottom-0 left-0 w-1/2 h-2/3 overflow-hidden rounded-lg border-4 border-surface image-zoom-hover shadow-2xl z-20 text-offset-overlap md:ml-0 md:mt-0 md:-left-12 md:-bottom-12">
+<img class="w-full h-full object-cover" data-alt="A close-up, high-detail macro shot of an artisan's hands meticulously painting intricate Kalamkari motifs on a natural fabric canvas, warm ivory ambient lighting, shallow depth of field, high-end editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3wegRlqrWV2TIpMebYAXSE1Hy5l7IR_EXSWjyeMYDwrlOAllWdeA6Xwn29vAwk9JgL40CoK-RPvO5YRr4LFf3vifr_MBzMmTdO_BdC6aZGNmFRMTMlG1EKejocKPFWJ4ola-zvkWNv5Q8SYVYxPe8bV31WRq4xWsxVJwFcmwIXJix16W415TpaEFxqO4SG5LJtspDQU7DwsqEhxpDLSg2DGQEHYexnbfbBbrLEk0UuMB1ogDEupv2"/>
+<div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded font-label-caps text-label-caps text-secondary">
+                            Artisans at work
+                        </div>
+</div>
+<!-- Decorative cultural pill -->
+<div class="absolute top-12 right-12 z-30 bg-tertiary-fixed-dim/20 backdrop-blur-md border border-tertiary-fixed-dim text-on-tertiary-fixed-variant font-label-caps text-[10px] px-3 py-1.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">palette</span> Ritual Arts
+                    </div>
+</div>
+</div>
+</section>
+<!-- Keep Exploring Section (Horizontal Discovery Rail) -->
+<section class="mb-32">
+<div class="px-margin-mobile md:px-margin-desktop flex justify-between items-end mb-8">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-2">Curated Collections</span>
+<h2 class="font-headline-md text-headline-md text-primary">Keep Exploring</h2>
+</div>
+<button class="hidden md:flex font-button text-button text-on-surface-variant hover:text-primary border-b border-on-surface-variant pb-1 items-center gap-1 transition-all hover:gap-2">
+                    View all collections <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Horizontal Rail -->
+<div class="flex overflow-x-auto no-scrollbar gap-gutter px-margin-mobile md:px-margin-desktop pb-8 snap-x snap-mandatory">
+<!-- Card 1 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start group cursor-pointer">
+<div class="w-full h-[450px] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A powerful portrait of a Chhau mask maker from Purulia, surrounded by colorful clay and paper mache masks in a rustic sunlit workshop. Rich earthen tones, high-contrast editorial style, evocative modern cultural documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo69B36Q2zVcgoc8R8ml-Ueh5BWvrcPgQl-Vn7DVqf-Tr3XvjLKGx5cPjL3bRkIYa8s3cofxNJnuAsgHKsOBGuXy2t7LaHLiekyTPR_A4IqZSj1DXM3Wla80nEPMEHNA-lbVxZyX7m5W3pKbirCtwMc4TLTJosDxMIO1YIImP_P8U3z_tZFN5XB48TSTAyn4FCRbCfRiw8EDXS-GoKXFu5nf3K9Yzjvoj8sO_G4jpBhjErfHRUew_m"/>
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm border border-surface-variant">Performance</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors text-[24px]">Chhau of Purulia</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Martial dance forms weaving tales of mythology.</p>
+<span class="font-button text-button text-on-surface-variant border-b border-transparent group-hover:border-on-surface-variant inline-block w-fit mt-2 pb-1 transition-all">Discover story</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start group cursor-pointer">
+<div class="w-full h-[450px] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Exquisite macro detail of a Pattachitra scroll from Odisha, showcasing incredibly fine linework of mythological figures in natural vegetable dyes on treated cloth. Bright, crisp museum-quality archive lighting, modern layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQV65AqIQKbHLUHbCCHm4xM-FaB2ObO6A-4J4wkhSmRezVZ-LNlxnGlVvy487JD-6Iv7ixrxZR8-ey2NTqnDjQIEt5YfMUeZldkakLhlegTiZrXQ0RKB0Q21juEdWsLkt8nEYQ5_-UlFef8jW_lP7BMAAWcDQM5gfk60cVbWVQn2ptylXH1mRBf1_yPChutck3GRUnkTxixA3EKwIkhZQN4WIFCDDH0w8yW8qD-wYbuc6L3I_QXX4T"/>
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm border border-surface-variant">Visual Arts</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors text-[24px]">Pattachitra Narratives</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Intricate scroll painting traditions from Odisha.</p>
+<span class="font-button text-button text-on-surface-variant border-b border-transparent group-hover:border-on-surface-variant inline-block w-fit mt-2 pb-1 transition-all">Discover story</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start group cursor-pointer">
+<div class="w-full h-[450px] overflow-hidden rounded-lg mb-6 relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A serene landscape photograph of Majuli island weavers working on traditional looms at dawn. Soft, misty lighting, muted indigo and ivory color palette, conveying a sense of timeless craft and tranquil heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxx9OnSCR3WNsjR6fOAaqzIm2Ct5sjzkdTuHIr6QNxt4qDPESrte51--jv4bS57BvO0mM3JkBIOeQ-sQ8EF5lO1CPRnOGI2N7eJyMlojW1VhzAf_Z9cc8LiAvrirwMSq-lMA4Kbx98bDI5p2OhyQNtX8x9-tios9__nlhx7hHOquBktJ2IknDjM_FD-dRK568QW921FKjD1Ik-7owf7tgdvOZvZDjMda5eYOSMi4EW2YbygtgFU_ze"/>
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-caps text-label-caps text-primary shadow-sm border border-surface-variant">Textiles</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors text-[24px]">Majuli Weaves</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The sacred looms of the river island.</p>
+<span class="font-button text-button text-on-surface-variant border-b border-transparent group-hover:border-on-surface-variant inline-block w-fit mt-2 pb-1 transition-all">Discover story</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Beyond the Familiar Section (Asymmetric Bento Grid) -->
+<section class="px-margin-mobile md:px-margin-desktop mb-32">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-4">Rare Archives</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Beyond the Familiar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Venture into the esoteric. These are traditions practiced by a dwindling few, preserved in remote corners, and waiting to be understood by a modern audience.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<!-- Large Feature (Left) -->
+<div class="md:col-span-7 relative rounded-xl overflow-hidden group cursor-pointer h-[400px] md:h-full">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="An atmospheric, moody shot of an elderly artisan practicing the rare Rogan Art in Kutch, Gujarat. Thick castor oil paint being stretched into fine lines by a metal stylus. Deep indigo shadows, warm glowing focal light, high-end documentary feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDufnx_QKGgzj-o_R-Uz6NmQIq4DO7WpcIxhJrmGmG9O5uUNXK3q5lIyGmDNcLIjBgQH2a7PNpdlysF6rqft70iEQ__Wnw2HnY6waZXJ5bR55FC7GfvjODy40is3JAA60REmwhJ8XIPI-TQoZfdURTnGkMiBbejehgu6qM_SV-d9UQp7f-8Me8XYoJVCceKTSrPLqK4s5GFpeLsFLrUqqyy_Oj8afzDlYvX2bpDPd74i4yg4xC6GfY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 flex flex-col justify-end h-full w-full">
+<div class="mb-4">
+<span class="bg-surface/20 text-surface backdrop-blur-md px-3 py-1 rounded border border-surface/30 font-label-caps text-[10px] uppercase tracking-wider">Gujarat</span>
+</div>
+<h3 class="font-display-lg text-[36px] md:text-[48px] text-surface mb-2 leading-tight">Rogan Art</h3>
+<p class="font-body-md text-surface-variant max-w-md mb-6 opacity-90">The dying art of painting with boiled castor oil, practiced by a single family in Kutch.</p>
+<div class="flex items-center text-surface font-button text-button group-hover:text-tertiary-fixed-dim transition-colors">
+                            Read the archive <span class="material-symbols-outlined ml-2 text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Right Stack -->
+<div class="md:col-span-5 flex flex-col gap-gutter h-full">
+<!-- Top Small Card -->
+<div class="flex-1 relative rounded-xl overflow-hidden group cursor-pointer h-[300px] md:h-auto bg-surface-container">
+<div class="absolute inset-0 w-full h-1/2 md:h-full md:w-1/2 right-0 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vibrant, dynamic photograph of Yakshagana performers from Karnataka getting ready backstage. Intricate headgear being tied. Warm tungsten light illuminating rich red and gold colors, contrasted against deep shadows. Cinematic editorial documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJyKxHzvbi-uhOGjE77kE-Z2GxAca9HSKgV328qsoh72Sl6aqeFhL-1UrpCTnbEqYpIonOeY3_SKwsKRvOLnhtmwN-xX6s---h0vTHYXSb5MtGtTPdkRS0i63e9VVG8g6kp94qMUqD63RqfK2CPyj-UKIVsHvd65QNkOC0byZgTos2AYoBnOQQSdEIw4GhD_aBsGNP2b9qCJdY7XMiy13VYdFNzKY0AsFIAMVaKj_11nVOXzFmjMK"/>
+</div>
+<div class="absolute inset-0 md:bg-gradient-to-r md:from-surface-container md:via-surface-container/90 md:to-transparent bg-gradient-to-t from-surface-container via-surface-container/90 to-transparent flex flex-col justify-end md:justify-center p-6 w-full md:w-2/3">
+<div class="mb-3">
+<span class="text-secondary font-label-caps text-[10px] uppercase tracking-wider">Karnataka</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-primary mb-2">Hebbevu Theater</h3>
+<p class="font-body-md text-on-surface-variant text-sm line-clamp-2">Ancient rural theater forms fading into the digital era.</p>
+</div>
+</div>
+<!-- Bottom Small Card (Text heavy) -->
+<div class="flex-1 rounded-xl bg-primary-container text-on-primary-container p-8 flex flex-col justify-between group cursor-pointer hover:bg-primary transition-colors duration-300">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-4xl mb-4 block" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-headline-md text-[28px] text-primary-fixed mb-4">The Lost Crafts Initiative</h3>
+<p class="font-body-md text-sm opacity-80 leading-relaxed">
+                                Join our effort to digitally preserve techniques and narratives before they vanish. Contribute field notes or support artisan communities.
+                            </p>
+</div>
+<div class="mt-6 font-button text-button text-secondary-fixed-dim flex items-center group-hover:text-secondary-fixed transition-colors">
+                            View the manifesto <span class="material-symbols-outlined ml-2 text-sm">arrow_outward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-primary text-primary dark:text-primary-fixed font-body-md text-body-md w-full py-16 border-t border-surface-container-high dark:border-surface-container">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed">Tvarita</span>
+<p class="text-on-surface-variant text-sm">© 2024 Tvarita Cultural Foundation. Preserving New Heritage.</p>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-12 mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Archives</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Contribute</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Legal</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Press</a>
+</div>
+</div>
+</footer>
+</body></html>

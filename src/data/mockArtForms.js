@@ -1,0 +1,210 @@
+export const initialArtForms = [
+  {
+    id: "chhau",
+    slug: "chhau",
+    title: "Chhau",
+    subtitle: "A vigorous martial dance combining acrobatics, elaborate masks, and mythological storytelling from eastern India.",
+    region: "Purulia · West Bengal",
+    state: "West Bengal",
+    category: "Dance",
+    readTime: "3 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-9IdhOBXIzb2NkiRxKWnnsMAajY0P3Bh52sv9sGfcVCgmYcvFz8CP5x9E_f68Rc_ilByu-MmHiK5qUGy7DPqJFtx7ARnx57Td-t_JU0SqJQgNdlif08CTXlcL19xdWialOkd5Ew5B7suwuwUnOWOwQJmK_EOIv_ZbDp8hWzfDHPZvyYnAITZgyyeQkBN7vBfa3-UQwskGjp1CG4JgjDrEFDJYJivWCKD860CVkUXv_sCJucYyFhvD",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAWg_2TNe6AGyzcHl8fS124OdGE9JAFzfrICLgExWmtnvR2TB84gDeKIEh4h3m_e-gXbd89hogbDCCkL4qsgUlF5AXRKczYrDjH-L91HJ953lfy3k8sPC8kRjBPOu0ZPlC8QkLPvqOVj_ZVfzYyo8kPXO23-Ju2b50ZEWZ395pMm444H_zSuNdv__rG1TBl_DpX2MHLtrgb790gKjMpJyRB04Xpa3KJgbJ8OqrLGR_lYQtCdMD74Yz2",
+    detailImages: [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDyY6S7UrniYwETQMayehP6huDxuUAtzYRP6FeA_0e7a9xi9zN42QLRYld3VrnMe17Wj-citaBWoSQpnFF7EZtVSz0n8hO0P7Y5h2C5fZM6mZbbrXjVyoTJFTTSGGnuKBnCv1Qo3pkH5O6fbxpMBifVzJKJrAzKCE_rURpNd4rjPQ21ylMVhtiFP2Dx7gMOM7vf1HHrxwHt-Ib_ZHGRJq0IXV4-pEUiaLzZnu6417TrUZTo9lUzG7bQ",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuC1UJz4EkzKGHAeoPdrvH8vGswrOKhJR8_ZyGIcN0mIltoR9hqGHfij5ItCcoUBafQXcO_CNGp-m0_2m3lBwk53UsaWgCYep9fJIGDC2-wcW_3rRWw1icaNrP_h_w6ColMNHZwtiFr8zp7PfYiHFjYP6BuSbt98lLXqyqec7-eeMevsWQcWp0tTRw-qiHRej99DvfbxmyQza5LRO_mWMZSnaGfT4-i4R-UdYoDwY6sVMfKGVxZ6qjQR"
+    ],
+    description: "Chhau is a traditional dance-drama from eastern India, renowned for its martial origins, vigorous movements, and vibrant, oversized masks. Rooted in the folk traditions of Purulia (West Bengal), Seraikella (Jharkhand), and Mayurbhanj (Odisha), it is deeply intertwined with regional folklore and religious epics like the Ramayana and Mahabharata.",
+    fullHistory: "Originating as a martial art form performed by local warriors (Paikas), Chhau evolved into a stylized dance to celebrate the spring festival of Chaitra Parva. The dance is characterized by energetic leaps, complex footwork, and a lack of dialogue—the narrative is driven entirely by physical expression and rhythmic accompaniment of instruments like the dhol and shehnai.",
+    keyArtists: [
+      {
+        name: "Gambhir Singh Mudda",
+        role: "Master Mask Maker",
+        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCdvAry2ua8jKguu1n6UfofYFJNz11ejZLNpu-Py4LMCmSniFi3kSxXlOG3r2EeI3i5tFx-BoZ6aA3U-ec8EmbfjVeIOsquK-LEyYAsR7IvVUoo6_T1xp4yPI1cFx_wvSNvGGfwUWdz3d-2qqi3kaE6ECXomZ3zWJ19xXX45Xycy8wSilQgy1kT83uk96_9OTzg_hD5Exl1ySLQPCZ9GyWTtERUPuSnOPwqmXip2sWOUUohKk5nsoKf"
+      },
+      {
+        name: "Subodh Mahato",
+        role: "Senior Chhau Performer",
+        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBcHV1VPCrm54evibI-5lo3oKGRYPkdeqz1T-na8dYZ5wkoqOsuTsxITnwdLrbI_CUwFcl6mcse_rIwXbFuZ4Cf-9Bwr6KxQ_FGfPQV8uYPCyCmrP6JZTjp--k780kC3BbxjVY9nUSlddwNoxulEpHNvxyZEZWXVxUSO7VXDgsl4f9SCPfp33jCmMeXbasLkF5AZq4kAYumUQ5WCxnkzur-EOnnGKPktW11w7muHt1hoAU1EodCGQyF"
+      }
+    ],
+    isFeatured: true,
+    isRare: false
+  },
+  {
+    id: "kalamkari",
+    slug: "kalamkari",
+    title: "Kalamkari Textiles",
+    subtitle: "An ancient style of hand-painted or block-printed cotton textile using natural vegetable dyes.",
+    region: "Srikalahasti · Andhra Pradesh",
+    state: "Andhra Pradesh",
+    category: "Craft",
+    readTime: "4 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3wegRlqrWV2TIpMebYAXSE1Hy5l7IR_EXSWjyeMYDwrlOAllWdeA6Xwn29vAwk9JgL40CoK-RPvO5YRr4LFf3vifr_MBzMmTdO_BdC6aZGNmFRMTMlG1EKejocKPFWJ4ola-zvkWNv5Q8SYVYxPe8bV31WRq4xWsxVJwFcmwIXJix16W415TpaEFxqO4SG5LJtspDQU7DwsqEhxpDLSg2DGQEHYexnbfbBbrLEk0UuMB1ogDEupv2",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzNhTrYRAPtwlkliLhNXi7262oI9lo20v4c_Qi8vSW4kTmYLEK5RUq6oZvUEU5oBwbLCidMuRycub6jgN7XvHLRhFtexQ5lSDpw1GRLolhVl9OeusMk4XPj6qOZbRhCJOUYAYbJPLvBr5eTKPcwhvvdTK7nep1DMBXdOIzLG4XiFptnbAOSL7vRlZJgc4cGQJWRHOyuhyP1KLo4IfScTBF-_gD1qDir7v7JkqjDyhX-6Nh55ezt-KC",
+    detailImages: [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBp6UTVDEh8I-OQCKePUHury9tlpxEPVf1wTgcT_hcanKLJLAdFuwgA6Kr0p4nVXV6beEKpZN9wBZ9_xpgy9AwFCSlbXTKTgH7vHp2NcdCKMtxIh39X_uBDzv0iDb8beUBRKTuED5UWT9cIsO5MyXc_nI3JcTz8mK4tjOd5xpe824h3I8Qk1Vr9cFIAiBFEfaejlcTxbAApKtCTWYZdbtt0NMvxebNfJDuzL4AnIMPpjXN8dSKUM_hK"
+    ],
+    description: "Kalamkari derives its name from 'Kalam' (pen) and 'Kari' (craftsmanship). It involves 23 intricate steps using natural organic dyes derived from plants, roots, and minerals.",
+    fullHistory: "Practiced extensively in Andhra Pradesh and Telangana, the Srikalahasti style of Kalamkari is characterized by freehand drawing using bamboo pens, depicting mythological narratives on natural unbleached cotton.",
+    keyArtists: [
+      {
+        name: "Gurappa Chetty",
+        role: "Padma Shri Kalamkari Artisan",
+        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrMztU-Arw1qHI4pVp7i9wx4x3XkX0aen87cjwWzBpEQZFS9oFc-xb3ExAMdamPAg84F9GqLf5sQip7hvMVefNi6HhiZdK9IqiCwIZSssPc5E6CI4S0uAKcQ0MyRcmkjdg4P1sb99irSehqN7wx_KXVB7-nUs3gBme0WKq3xv9n2TUCrfH01nvcUO37To9cJVMGJ0KP44hi6I1RKJrZH7yFPiFZlnW8OQ9U2HkVAY7Kb-NrqWAeAIg"
+      }
+    ],
+    isFeatured: true,
+    isRare: false
+  },
+  {
+    id: "pattachitra",
+    slug: "pattachitra",
+    title: "Pattachitra Narratives",
+    subtitle: "Intricate scroll painting traditions depicting mythological stories in natural dyes.",
+    region: "Raghurajpur · Odisha",
+    state: "Odisha",
+    category: "Craft",
+    readTime: "5 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQV65AqIQKbHLUHbCCHm4xM-FaB2ObO6A-4J4wkhSmRezVZ-LNlxnGlVvy487JD-6Iv7ixrxZR8-ey2NTqnDjQIEt5YfMUeZldkakLhlegTiZrXQ0RKB0Q21juEdWsLkt8nEYQ5_-UlFef8jW_lP7BMAAWcDQM5gfk60cVbWVQn2ptylXH1mRBf1_yPChutck3GRUnkTxixA3EKwIkhZQN4WIFCDDH0w8yW8qD-wYbuc6L3I_QXX4T",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQV65AqIQKbHLUHbCCHm4xM-FaB2ObO6A-4J4wkhSmRezVZ-LNlxnGlVvy487JD-6Iv7ixrxZR8-ey2NTqnDjQIEt5YfMUeZldkakLhlegTiZrXQ0RKB0Q21juEdWsLkt8nEYQ5_-UlFef8jW_lP7BMAAWcDQM5gfk60cVbWVQn2ptylXH1mRBf1_yPChutck3GRUnkTxixA3EKwIkhZQN4WIFCDDH0w8yW8qD-wYbuc6L3I_QXX4T",
+    detailImages: [],
+    description: "Pattachitra is a traditional cloth-based scroll painting form native to Odisha and West Bengal. Known for intricate details and mythological themes.",
+    fullHistory: "Dating back to the 5th century BC, Pattachitra painters (Chitrakars) prepare canvas treated with tamarind seed paste and chalk, drawing fine border lines and natural pigments.",
+    keyArtists: [],
+    isFeatured: true,
+    isRare: false
+  },
+  {
+    id: "kathakali",
+    slug: "kathakali",
+    title: "Kathakali",
+    subtitle: "The classical dance-drama of Kerala with elaborate facial makeup and expressive facial movements.",
+    region: "Kerala",
+    state: "Kerala",
+    category: "Dance",
+    readTime: "3 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkwC3u5-_RJ0vpFq6ehJ490vmdc3iyCOZaU2dWWb8cGbCVGr_YYEL8S0au1oRG25HLTcns7dO98r5C_wzeFDfuRno2KX0yDi0qo6goGCIs4PuIpIcS9L1J3JM9LnKCX5ufHqfkcwe9Uc9A6aV846ncFHWsgINb5MfUI2y-Vn4WjSbvoCrD9wcgoTwGER0fIJmEKd0qVlKpqrUXyhVzekqqDUQVcXkUPHiUYHFtrTrMS4nGmJ56_m5Y",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkwC3u5-_RJ0vpFq6ehJ490vmdc3iyCOZaU2dWWb8cGbCVGr_YYEL8S0au1oRG25HLTcns7dO98r5C_wzeFDfuRno2KX0yDi0qo6goGCIs4PuIpIcS9L1J3JM9LnKCX5ufHqfkcwe9Uc9A6aV846ncFHWsgINb5MfUI2y-Vn4WjSbvoCrD9wcgoTwGER0fIJmEKd0qVlKpqrUXyhVzekqqDUQVcXkUPHiUYHFtrTrMS4nGmJ56_m5Y",
+    detailImages: [],
+    description: "Kathakali is a major form of classical Indian dance. It is a 'story play' genre of art, but distinguished by the elaborately colorful makeup, costumes and face masks that the traditionally male actor-dancers wear.",
+    fullHistory: "Originating in southwestern India in the 17th century, Kathakali synthesizes music, vocal performance, hand gestures (mudras), and facial expressions.",
+    keyArtists: [],
+    isFeatured: true,
+    isRare: false
+  },
+  {
+    id: "rogan-art",
+    slug: "rogan-art",
+    title: "Rogan Art",
+    subtitle: "The rare, dying art of painting with boiled castor oil, practiced by a single family in Kutch.",
+    region: "Nirona · Gujarat",
+    state: "Gujarat",
+    category: "Craft",
+    readTime: "6 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDDufnx_QKGgzj-o_R-Uz6NmQIq4DO7WpcIxhJrmGmG9O5uUNXK3q5lIyGmDNcLIjBgQH2a7PNpdlysF6rqft70iEQ__Wnw2HnY6waZXJ5bR55FC7GfvjODy40is3JAA60REmwhJ8XIPI-TQoZfdURTnGkMiBbejehgu6qM_SV-d9UQp7f-8Me8XYoJVCceKTSrPLqK4s5GFpeLsFLrUqqyy_Oj8afzDlYvX2bpDPd74i4yg4xC6GfY",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDDufnx_QKGgzj-o_R-Uz6NmQIq4DO7WpcIxhJrmGmG9O5uUNXK3q5lIyGmDNcLIjBgQH2a7PNpdlysF6rqft70iEQ__Wnw2HnY6waZXJ5bR55FC7GfvjODy40is3JAA60REmwhJ8XIPI-TQoZfdURTnGkMiBbejehgu6qM_SV-d9UQp7f-8Me8XYoJVCceKTSrPLqK4s5GFpeLsFLrUqqyy_Oj8afzDlYvX2bpDPd74i4yg4xC6GfY",
+    detailImages: [],
+    description: "Rogan painting is an art of cloth printing practiced in the Kutch district of Gujarat. Paint made from boiled castor oil and vegetable pigments is applied to fabric using a metal stylus.",
+    fullHistory: "Over 400 years old, Rogan art was preserved by the Khatri family of Nirona. The paste is stretched into fine threads in the palm and placed on cloth without touching the stylus directly to the surface.",
+    keyArtists: [
+      {
+        name: "Abdul Gafur Khatri",
+        role: "Master Rogan Artist",
+        avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBtWO13FG11yi1SzCiATIgzNgMYsZDySAvp3BF-A07q91gWm5c66mqvn0WMWipl7vtkdblNfs_ecF4PcYpOlVEF4j7nEDlK6-Ctvd6pJPWvm5XM4OOYbJ6QOEfNLfEqtOFhZVyaWbEzbx_CShnMAQUJf5dIr_uI0yp89ma0MxU7mjp-gLrgPR98349ZiHGa7Tnz-drG8NAMtEwVysw1PKFJ0BGlac1nBhvtueQpZheolFxa4dUh9NNn"
+      }
+    ],
+    isFeatured: false,
+    isRare: true
+  },
+  {
+    id: "warli-art",
+    slug: "warli-art",
+    title: "Warli Tribal Art",
+    subtitle: "Ancient tribal wall paintings using basic geometric shapes to express daily village life.",
+    region: "Maharashtra",
+    state: "Maharashtra",
+    category: "Ritual",
+    readTime: "3 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBCQAw0kvjQFKm-YUDYN1QQq5zT3OSSDgWPJP7xAhFHejExs-kW_VTOowGN3eoQL9o7CnMiJqC2p-N1od99oeH9-64yLXTKGj_lrvy2dGpMUb9gTGjwlejaN3mlZtIX-ZxxvS7dLyYbCmH9PRsIJyGNXYxQdO48zZtNsDMcOq8Q8597T5r2BS2yStM_cL0TB0rZlN7GUu_waadGZYuwDJ1DU027Y99vsgjdNX60kL2btxYjFiEmy57B",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBCQAw0kvjQFKm-YUDYN1QQq5zT3OSSDgWPJP7xAhFHejExs-kW_VTOowGN3eoQL9o7CnMiJqC2p-N1od99oeH9-64yLXTKGj_lrvy2dGpMUb9gTGjwlejaN3mlZtIX-ZxxvS7dLyYbCmH9PRsIJyGNXYxQdO48zZtNsDMcOq8Q8597T5r2BS2yStM_cL0TB0rZlN7GUu_waadGZYuwDJ1DU027Y99vsgjdNX60kL2btxYjFiEmy57B",
+    detailImages: [],
+    description: "Warli painting is a tribal art mostly created by the tribal people from the North Sahyadri Range in Maharashtra. These rudimental wall paintings use white pigment from rice paste.",
+    fullHistory: "Dating back to 2500 BC, Warli art relies on circles, triangles, and squares to symbolize the sun, moon, mountains, trees, and human activity.",
+    keyArtists: [],
+    isFeatured: false,
+    isRare: false
+  },
+  {
+    id: "dhokra",
+    slug: "dhokra",
+    title: "Dhokra Metal Casting",
+    subtitle: "Non-ferrous metal casting using the ancient lost-wax technique dating back to Mohenjo-daro.",
+    region: "Mayurbhanj · Odisha / Bastar",
+    state: "Odisha",
+    category: "Craft",
+    readTime: "4 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBAtc93rg_WduFOKqZR0OlpuBnUQGjqo95VHoV7lwemvTVRe-t-1rdMYF-kOyCFonNDMEt-Z1EIdH18TjzSdH_HXZ77q6UeTXhu9vP1fPb0F_g8VMkTntDdZxm_5LYx3AnNPSNXgb3uBE68m3qwusZ0KDrkDqR__FMweZmcpgTVZiNR5QHr2_32OvZbI96XqX660700Htg7FK9ygjGeUHoWNKyqHFMJlTXPRcESOAxhQQLs4yjbuAAv",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBAtc93rg_WduFOKqZR0OlpuBnUQGjqo95VHoV7lwemvTVRe-t-1rdMYF-kOyCFonNDMEt-Z1EIdH18TjzSdH_HXZ77q6UeTXhu9vP1fPb0F_g8VMkTntDdZxm_5LYx3AnNPSNXgb3uBE68m3qwusZ0KDrkDqR__FMweZmcpgTVZiNR5QHr2_32OvZbI96XqX660700Htg7FK9ygjGeUHoWNKyqHFMJlTXPRcESOAxhQQLs4yjbuAAv",
+    detailImages: [],
+    description: "Dhokra is non-ferrous metal casting using the lost-wax casting technique. One of the earliest known lost-wax artifacts is the dancing girl of Mohenjo-daro.",
+    fullHistory: "Practiced by the Dhokra Damar tribes of West Bengal, Odisha, and Chhattisgarh, each piece is handcrafted and completely unique as the clay mold is broken during metal pouring.",
+    keyArtists: [],
+    isFeatured: false,
+    isRare: false
+  },
+  {
+    id: "baul",
+    slug: "baul-music",
+    title: "Baul Mystic Music",
+    subtitle: "Soulful wandering minstrel traditions of Bengal expressing spiritual philosophy through song.",
+    region: "Birbhum · West Bengal",
+    state: "West Bengal",
+    category: "Music",
+    readTime: "4 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCySsIPRuY65ej3-YY_iAZH0mun_VUcxLCzYYEwT2uMiCwDGlGlnCPCcTHcEQ-X7a86DRxC_CuPx5JclLvDBxvZfVJH3xDpLMysMl0LmSG2Rc9NfgU99qvwZ5k4pzXX2xw2AuZUNp9_QCOFrrOZsDtR8XTHYTqPxnhPV64jMDPthQWCj4t1d35bmjTrTZYsSG1CezBA-W3SZUhT6cQNbvzMy3BzYT3ekId099MxZ14JoKrmoKGt0Ggq",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCySsIPRuY65ej3-YY_iAZH0mun_VUcxLCzYYEwT2uMiCwDGlGlnCPCcTHcEQ-X7a86DRxC_CuPx5JclLvDBxvZfVJH3xDpLMysMl0LmSG2Rc9NfgU99qvwZ5k4pzXX2xw2AuZUNp9_QCOFrrOZsDtR8XTHYTqPxnhPV64jMDPthQWCj4t1d35bmjTrTZYsSG1CezBA-W3SZUhT6cQNbvzMy3BzYT3ekId099MxZ14JoKrmoKGt0Ggq",
+    detailImages: [],
+    description: "The Bauls are a group of mystic minstrels from Bengal. Baul music represents a particular type of folk song incorporating Sufi and Vaishnava philosophy.",
+    fullHistory: "Recognized as UNESCO Intangible Cultural Heritage, Baul songs are accompanied by the Ektara (one-string instrument) and Khamak drum.",
+    keyArtists: [],
+    isFeatured: false,
+    isRare: false
+  },
+  {
+    id: "majuli-weaves",
+    slug: "majuli-weaves",
+    title: "Majuli Weaves",
+    subtitle: "The sacred handloom traditions of the world's largest river island.",
+    region: "Majuli · Assam",
+    state: "Assam",
+    category: "Craft",
+    readTime: "3 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxx9OnSCR3WNsjR6fOAaqzIm2Ct5sjzkdTuHIr6QNxt4qDPESrte51--jv4bS57BvO0mM3JkBIOeQ-sQ8EF5lO1CPRnOGI2N7eJyMlojW1VhzAf_Z9cc8LiAvrirwMSq-lMA4Kbx98bDI5p2OhyQNtX8x9-tios9__nlhx7hHOquBktJ2IknDjM_FD-dRK568QW921FKjD1Ik-7owf7tgdvOZvZDjMda5eYOSMi4EW2YbygtgFU_ze",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCxx9OnSCR3WNsjR6fOAaqzIm2Ct5sjzkdTuHIr6QNxt4qDPESrte51--jv4bS57BvO0mM3JkBIOeQ-sQ8EF5lO1CPRnOGI2N7eJyMlojW1VhzAf_Z9cc8LiAvrirwMSq-lMA4Kbx98bDI5p2OhyQNtX8x9-tios9__nlhx7hHOquBktJ2IknDjM_FD-dRK568QW921FKjD1Ik-7owf7tgdvOZvZDjMda5eYOSMi4EW2YbygtgFU_ze",
+    detailImages: [],
+    description: "Mishing tribal women on Majuli island weave vibrant Mekhela Chadors and traditional garments on hand looms set along the Brahmaputra riverbanks.",
+    fullHistory: "Handloom weaving is an integral domestic art in Majuli, passed down through generations of women weavers utilizing Muga silk and cotton.",
+    keyArtists: [],
+    isFeatured: true,
+    isRare: false
+  },
+  {
+    id: "hebbevu-theater",
+    slug: "hebbevu-theater",
+    title: "Hebbevu Theater",
+    subtitle: "Ancient rural theater forms fading into the digital era in southern India.",
+    region: "Karnataka",
+    state: "Karnataka",
+    category: "Theatre",
+    readTime: "5 min read",
+    coverImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuClJyKxHzvbi-uhOGjE77kE-Z2GxAca9HSKgV328qsoh72Sl6aqeFhL-1UrpCTnbEqYpIonOeY3_SKwsKRvOLnhtmwN-xX6s---h0vTHYXSb5MtGtTPdkRS0i63e9VVG8g6kp94qMUqD63RqfK2CPyj-UKIVsHvd65QNkOC0byZgTos2AYoBnOQQSdEIw4GhD_aBsGNP2b9qCJdY7XMiy13VYdFNzKY0AsFIAMVaKj_11nVOXzFmjMK",
+    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuClJyKxHzvbi-uhOGjE77kE-Z2GxAca9HSKgV328qsoh72Sl6aqeFhL-1UrpCTnbEqYpIonOeY3_SKwsKRvOLnhtmwN-xX6s---h0vTHYXSb5MtGtTPdkRS0i63e9VVG8g6kp94qMUqD63RqfK2CPyj-UKIVsHvd65QNkOC0byZgTos2AYoBnOQQSdEIw4GhD_aBsGNP2b9qCJdY7XMiy13VYdFNzKY0AsFIAMVaKj_11nVOXzFmjMK",
+    detailImages: [],
+    description: "Traditional Yakshagana and rural folk drama troupes in Karnataka performing all-night epics in village squares.",
+    fullHistory: "Blending music, dance, dialogue, and extravagant headgear, Yakshagana and rural theatrical forms bring mythological tales alive for agricultural communities.",
+    keyArtists: [],
+    isFeatured: false,
+    isRare: true
+  }
+];

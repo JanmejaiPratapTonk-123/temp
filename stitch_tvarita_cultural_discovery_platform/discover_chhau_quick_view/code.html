@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tvarita - Chhau Art Form Popup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#9d422b",
+                        "surface-container": "#f0eee9",
+                        "on-surface-variant": "#44474d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#031632",
+                        "tertiary-fixed": "#ffdcbe",
+                        "surface": "#fbf9f4",
+                        "on-tertiary-fixed-variant": "#6a3c00",
+                        "primary-fixed-dim": "#b6c7eb",
+                        "surface-bright": "#fbf9f4",
+                        "background": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-fixed-dim": "#ffb4a2",
+                        "on-secondary-fixed-variant": "#7e2b16",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-dim": "#dbdad5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface-variant": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#374765",
+                        "on-tertiary-container": "#cc822f",
+                        "on-secondary-container": "#74240f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4e5f7e",
+                        "on-primary-fixed": "#081b38",
+                        "outline-variant": "#c5c6ce",
+                        "on-background": "#1b1c19",
+                        "on-error-container": "#93000a",
+                        "outline": "#75777e",
+                        "primary-fixed": "#d7e2ff",
+                        "primary-container": "#1a2b48",
+                        "tertiary-fixed-dim": "#ffb871",
+                        "inverse-surface": "#30312e",
+                        "on-surface": "#1b1c19",
+                        "secondary-fixed": "#ffdbd2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#261200",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fd8c6f",
+                        "on-primary-container": "#8293b5",
+                        "inverse-primary": "#b6c7eb",
+                        "tertiary-container": "#432400",
+                        "on-secondary-fixed": "#3c0800",
+                        "surface-container-high": "#eae8e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-caps": ["Plus Jakarta Sans", "sans-serif"],
+                        "button": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600", "textTransform": "uppercase" }],
+                        "button": ["14px", { "lineHeight": "1.0", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(251, 249, 244, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        @keyframes popupEnter {
+            0% { transform: scale(0.95) translateY(20px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        .popup-animate {
+            animation: popupEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .image-zoom-container {
+            overflow: hidden;
+        }
+        .image-zoom-container img {
+            transition: transform 0.6s ease;
+        }
+        .image-zoom-container:hover img {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen relative overflow-hidden font-body-md">
+<!-- Blurred Background Context (Simulated Explore Grid) -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-50 blur-sm scale-105 transition-all duration-1000 ease-out" id="bg-context">
+<div class="max-w-container-max mx-auto px-margin-desktop py-24 grid grid-cols-12 gap-gutter">
+<!-- Simulated grid content to provide visual context behind the glass -->
+<div class="col-span-12 md:col-span-8 flex flex-col gap-16">
+<div class="h-96 w-full bg-surface-container rounded-lg" data-alt="A softly focused, wide-angle shot of an abstract art gallery in a modern light-mode setting. Neutral ivory walls with subtle shadows, creating a calm, premium atmosphere. A few unidentifiable art pieces hang in the distance. The lighting is diffused and natural." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTikQfpt9e1vDyOH8UHkZ77JSiodCZ-7voTAh3XmS5AF0MPGLt4AAxEJE_a3-Ey0k2e0NEAY0u0u57Eb5BrHcG18Nfc7Tm3LeoZV1P4Cn29chSljPwAIeskFxULJeAWSUI-wOtrh4dIweDVDd_mmC_DNlUiCaD_5zmn7SwQb9nin2qNtdnBWCxAghU5CT7-7bwLhkQOxhwC5jBJJW_LOSfHe3Um_tER1WD--Cjiajx5vj7I6QVT2vr');"></div>
+<div class="h-64 w-3/4 bg-surface-container rounded-lg" data-alt="A blurred background scene showing a portion of a digital editorial layout. Large serif typography elements are vaguely visible against a warm ivory background. The composition is asymmetrical and modern, implying a sophisticated digital museum interface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPUUDWaNcAXgHYlcUthqjF9JkjAfX3xfLain6Wa1KyR_yQhwjrWlbMv2Ran-kt-zqRik3Ecmn1mEgp85a6Z1rNRHLnNwlzNmTlzgtGeTNwPjgavsRWLxvLbhXAP0lLVYKFP0z2yYG8r0mxiUIpF7-1sr4EJP-WhhdXPdUXC6Nihl3og7MXgG5W8_YLVsQCBXCqvUogcI63FCfzwvmVu55_JjnHEs98a3rED1D6hYPeWAZ9iCU84c56');"></div>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col gap-16 mt-32">
+<div class="h-[500px] w-full bg-surface-container rounded-lg" data-alt="An out-of-focus background element resembling a tall portrait photograph or vertical artifact display in a bright, modern setting. The colors are muted earth tones against a stark white or light beige backdrop, contributing to an editorial aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsd-oOof1m9TazCcEvfNwV9cT8gcJlcmqNNkY1ApcqeaAkn1M59Vvi49CW6Pnt7FUoS4fK3Yu1WJLAG6c45x-YYI3jfNCmGXSLYkQ1Z_Hy4rPaO7myDn1ByRG2tYH2Gugw9Fu9MNmPr8IcAZfIrvFSmzJVMs3e2RwoztW0uEqPF0xl29N0PsdmyYfcnsFdsPkv37hV3UaszNfQNLbM835dYDIZAhKEZM9oxgUjSuX-qWIi48jK8TT8');"></div>
+</div>
+</div>
+</div>
+<!-- Overlay / Backdrop -->
+<div class="fixed inset-0 z-40 bg-surface-container/30 backdrop-blur-[2px] transition-opacity duration-500 flex items-center justify-center p-margin-mobile md:p-margin-desktop">
+<!-- Art Form Popup Card -->
+<article class="glass-panel w-full max-w-2xl rounded-xl shadow-[0_12px_48px_rgba(3,22,50,0.08)] relative overflow-hidden popup-animate border border-surface-container-high z-50 flex flex-col md:flex-row">
+<!-- Left Image/Visual Column -->
+<div class="w-full md:w-5/12 h-64 md:h-auto image-zoom-container bg-surface-container relative">
+<!-- Using the provided logo/monogram image as requested by the prompt for the art form visual representation in this context -->
+<img alt="Tvarita Logo representing Chhau" class="w-full h-full object-cover object-center absolute inset-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+<!-- Tag Overlay -->
+<div class="absolute top-4 left-4 z-10">
+<span class="inline-flex items-center px-3 py-1 rounded-full border border-secondary/20 bg-surface/80 backdrop-blur-sm font-label-caps text-label-caps text-secondary uppercase tracking-widest">
+                        Art Form
+                    </span>
+</div>
+</div>
+<!-- Right Content Column -->
+<div class="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-between">
+<!-- Close Button (Top Right Absolute) -->
+<button aria-label="Close popup" class="absolute top-4 right-4 p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container-highest" id="close-btn" type="button">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+<div>
+<!-- Location / Meta -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps mb-4 uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Purulia · West Bengal</span>
+</div>
+<!-- Title -->
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">CHHAU</h2>
+<!-- Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        A traditional dance form known for powerful movement, masks and storytelling.
+                    </p>
+</div>
+<!-- Actions -->
+<div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+<a class="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-primary text-on-primary px-6 py-4 rounded font-button text-button hover:bg-primary-container transition-colors shadow-sm" href="#">
+                        Learn about Chhau 
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<button class="w-full sm:w-auto inline-flex justify-center items-center px-6 py-4 font-button text-button text-on-surface-variant hover:text-primary border-b border-transparent hover:border-outline transition-all" id="secondary-close-btn" type="button">
+                        Close
+                    </button>
+</div>
+</div>
+</article>
+</div>
+<script>
+        // Simple script to handle interaction feel (Subtle spring animation out)
+        document.addEventListener('DOMContentLoaded', () => {
+            const closeBtn = document.getElementById('close-btn');
+            const secondaryCloseBtn = document.getElementById('secondary-close-btn');
+            const card = document.querySelector('article');
+            const backdrop = document.querySelector('.fixed.inset-0');
+            const bgContext = document.getElementById('bg-context');
+
+            function closePopup() {
+                // Animate out
+                card.style.transition = 'all 0.4s cubic-bezier(0.36, 0, 0.66, -0.56)'; // 'Spring' out
+                card.style.transform = 'scale(0.9) translateY(30px)';
+                card.style.opacity = '0';
+                
+                backdrop.style.opacity = '0';
+                bgContext.style.filter = 'blur(0px)';
+                bgContext.style.transform = 'scale(1)';
+                
+                // Hide after animation (simulated routing/closing)
+                setTimeout(() => {
+                    backdrop.style.display = 'none';
+                }, 400);
+            }
+
+            closeBtn.addEventListener('click', closePopup);
+            secondaryCloseBtn.addEventListener('click', closePopup);
+        });
+    </script>
+</body></html>

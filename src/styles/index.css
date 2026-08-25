@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .image-zoom-hover img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .image-zoom-hover:hover img {
+    transform: scale(1.02);
+  }
+
+  .text-offset-overlap {
+    margin-top: -3rem;
+    margin-left: -2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (max-width: 768px) {
+    .text-offset-overlap {
+      margin-top: -1.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .glass-header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-panel {
+    background: rgba(251, 249, 244, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .minimal-input {
+    border: none;
+    border-bottom: 1px solid theme('colors.outline');
+    background-color: transparent;
+    padding: theme('spacing.unit') 0;
+    transition: border-color 0.3s ease;
+  }
+  .minimal-input:focus {
+    outline: none;
+    border-bottom-color: theme('colors.secondary');
+    box-shadow: none;
+  }
+  .minimal-input::placeholder {
+    color: theme('colors.outline-variant');
+  }
+
+  .form-input-bottom-border {
+    border: none;
+    border-bottom: 1px solid theme('colors.outline');
+    background: transparent;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    transition: border-color 0.2s;
+  }
+  .form-input-bottom-border:focus {
+    box-shadow: none;
+    border-bottom-color: theme('colors.secondary');
+  }
+
+  .ai-draft-bg {
+    background-image: linear-gradient(135deg, rgba(234,232,227,0.5) 0%, rgba(251,249,244,1) 100%);
+    border: 1px dashed theme('colors.outline-variant');
+  }
+
+  .story-card-overlay {
+    background: linear-gradient(to top, rgba(3, 22, 50, 0.85) 0%, rgba(3, 22, 50, 0) 100%);
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.material-symbols-outlined[data-weight="fill"],
+.material-symbols-outlined.icon-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

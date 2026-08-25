@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tvarita - Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#9d422b",
+                      "surface-container": "#f0eee9",
+                      "on-surface-variant": "#44474d",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#031632",
+                      "tertiary-fixed": "#ffdcbe",
+                      "surface": "#fbf9f4",
+                      "on-tertiary-fixed-variant": "#6a3c00",
+                      "primary-fixed-dim": "#b6c7eb",
+                      "surface-bright": "#fbf9f4",
+                      "background": "#fbf9f4",
+                      "surface-container-low": "#f5f3ee",
+                      "secondary-fixed-dim": "#ffb4a2",
+                      "on-secondary-fixed-variant": "#7e2b16",
+                      "on-tertiary-fixed": "#2d1600",
+                      "surface-dim": "#dbdad5",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e4e2dd",
+                      "surface-variant": "#e4e2dd",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#374765",
+                      "on-tertiary-container": "#cc822f",
+                      "on-secondary-container": "#74240f",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4e5f7e",
+                      "on-primary-fixed": "#081b38",
+                      "outline-variant": "#c5c6ce",
+                      "on-background": "#1b1c19",
+                      "on-error-container": "#93000a",
+                      "outline": "#75777e",
+                      "primary-fixed": "#d7e2ff",
+                      "primary-container": "#1a2b48",
+                      "tertiary-fixed-dim": "#ffb871",
+                      "inverse-surface": "#30312e",
+                      "on-surface": "#1b1c19",
+                      "secondary-fixed": "#ffdbd2",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#261200",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#fd8c6f",
+                      "on-primary-container": "#8293b5",
+                      "inverse-primary": "#b6c7eb",
+                      "tertiary-container": "#432400",
+                      "on-secondary-fixed": "#3c0800",
+                      "surface-container-high": "#eae8e3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "container-max": "1440px",
+                      "gutter": "32px",
+                      "unit": "8px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "EB Garamond", "serif"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans", "sans-serif"
+                      ],
+                      "label-caps": [
+                              "Plus Jakarta Sans", "sans-serif"
+                      ],
+                      "button": [
+                              "Plus Jakarta Sans", "sans-serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "EB Garamond", "serif"
+                      ],
+                      "headline-md": [
+                              "EB Garamond", "serif"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans", "sans-serif"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond", "serif"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-md bg-transparent flat no shadows flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-headline-md text-primary dark:text-primary-fixed tracking-tight">Tvarita</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Explore</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Events</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">My Journey</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<header class="mb-16 md:mb-24 flex flex-col md:flex-row gap-8 items-end justify-between">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Experience it IRL.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Connect with traditions through live performances and workshops.</p>
+</div>
+<div class="w-24 h-24 hidden md:block">
+<img alt="Tvarita Logo" class="w-full h-full object-contain mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+</div>
+</header>
+<!-- Bento Grid Events -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-32">
+<!-- Event 1 (Large) -->
+<article class="md:col-span-8 group relative flex flex-col rounded-xl overflow-hidden shadow-sm bg-surface-container-lowest">
+<div class="relative h-96 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A large, highly detailed photographic capture of a classical Indian Bharatanatyam dancer mid-performance on a stage, illuminated by warm, dramatic theatrical lighting. The dancer wears vibrant red and gold traditional attire, and the background is deep, atmospheric shadow. The image is high-resolution, evoking a premium modern cultural documentary style, perfect for a high-end digital museum platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA98f_rq3KDrxiH7TmLgB7EPZnVog_jOVfpXVw55SAbSqhQ0T32aepkufjY0MSkVXhB5b-gyju0jDaWZBjUQ3ACPlf3Ub9ICQ6jxQy5yT6B7RQFR7pEdxzBNzMUyu5w0oOeSmp-otO8sO3HpmLKJalkKC19N8y655aaort0pGpaIYBWp8c4pGXVAr7aEaS4gKoXgblbJA7aSZSH2xM6Z3x6csLFy-7JllvUkJ_ckqOlZgbLZZozXcHP"/>
+<div class="absolute top-4 left-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-tertiary-fixed-dim/90 text-on-tertiary-container backdrop-blur-sm rounded-full border border-tertiary-fixed">Dance</span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Rhythms of Tanjore</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Featuring Padmashri Ananda Shankar Jayant</p>
+<div class="flex items-center gap-4 text-on-surface-variant mb-6 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">calendar_today</span> Oct 15, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">location_on</span> Chennai, IN</span>
+</div>
+</div>
+<button class="self-start text-secondary font-button text-button border-b border-transparent hover:border-secondary transition-all pb-1 flex items-center gap-2">
+                        Request to attend <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Event 2 (Small) -->
+<article class="md:col-span-4 group relative flex flex-col rounded-xl overflow-hidden shadow-sm bg-surface-container-lowest">
+<div class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-quality image of a traditional Indian artisan hand-painting a kalamkari textile. The focus is on the intricate brushwork and natural dyes in rich terracotta and indigo tones. The lighting is soft and natural, emphasizing the texture of the fabric and the artisan's skill. The style is modern editorial, clean and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNhTrYRAPtwlkliLhNXi7262oI9lo20v4c_Qi8vSW4kTmYLEK5RUq6oZvUEU5oBwbLCidMuRycub6jgN7XvHLRhFtexQ5lSDpw1GRLolhVl9OeusMk4XPj6qOZbRhCJOUYAYbJPLvBr5eTKPcwhvvdTK7nep1DMBXdOIzLG4XiFptnbAOSL7vRlZJgc4cGQJWRHOyuhyP1KLo4IfScTBF-_gD1qDir7v7JkqjDyhX-6Nh55ezt-KC"/>
+<div class="absolute top-4 left-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-surface-container-low/90 text-primary backdrop-blur-sm rounded-full border border-outline-variant">Workshop</span>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h2 class="font-headline-md text-[24px] text-primary mb-2">Kalamkari Masterclass</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Learn ancient dyeing techniques.</p>
+<div class="flex items-center gap-4 text-on-surface-variant mb-6 text-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Nov 02, 2024</span>
+</div>
+</div>
+<button class="self-start text-secondary font-button text-button border-b border-transparent hover:border-secondary transition-all pb-1 flex items-center gap-2">
+                        Request to attend <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface dark:bg-primary max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-high dark:bg-surface-container flat no shadows">
+<div class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed mb-8 md:mb-0">
+            Tvarita
+        </div>
+<div class="flex flex-col gap-4 text-right">
+<div class="flex gap-6 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Archives</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Contribute</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Legal</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all opacity-80 hover:opacity-100" href="#">Press</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 Tvarita Cultural Foundation. Preserving New Heritage.</p>
+</div>
+</footer>
+</body></html>

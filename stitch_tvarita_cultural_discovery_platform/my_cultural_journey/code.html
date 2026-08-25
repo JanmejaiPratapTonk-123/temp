@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Cultural Journey - Tvarita</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#9d422b",
+                        "surface-container": "#f0eee9",
+                        "on-surface-variant": "#44474d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#031632",
+                        "tertiary-fixed": "#ffdcbe",
+                        "surface": "#fbf9f4",
+                        "on-tertiary-fixed-variant": "#6a3c00",
+                        "primary-fixed-dim": "#b6c7eb",
+                        "surface-bright": "#fbf9f4",
+                        "background": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-fixed-dim": "#ffb4a2",
+                        "on-secondary-fixed-variant": "#7e2b16",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-dim": "#dbdad5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface-variant": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#374765",
+                        "on-tertiary-container": "#cc822f",
+                        "on-secondary-container": "#74240f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4e5f7e",
+                        "on-primary-fixed": "#081b38",
+                        "outline-variant": "#c5c6ce",
+                        "on-background": "#1b1c19",
+                        "on-error-container": "#93000a",
+                        "outline": "#75777e",
+                        "primary-fixed": "#d7e2ff",
+                        "primary-container": "#1a2b48",
+                        "tertiary-fixed-dim": "#ffb871",
+                        "inverse-surface": "#30312e",
+                        "on-surface": "#1b1c19",
+                        "secondary-fixed": "#ffdbd2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#261200",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fd8c6f",
+                        "on-primary-container": "#8293b5",
+                        "inverse-primary": "#b6c7eb",
+                        "tertiary-container": "#432400",
+                        "on-secondary-fixed": "#3c0800",
+                        "surface-container-high": "#eae8e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-caps": ["Plus Jakarta Sans", "sans-serif"],
+                        "button": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1.0", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-primary/80 backdrop-blur-md fixed top-0 w-full z-50 bg-transparent flat no shadows">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed scale-95 active:scale-90 transition-transform" href="#">
+                Tvarita
+            </a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-caps text-label-caps hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Explore</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-caps text-label-caps hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Events</a>
+<a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary font-label-caps text-label-caps hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">My Journey</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-label-caps text-label-caps hover:text-secondary transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">About</a>
+</div>
+<div class="flex items-center gap-unit">
+<button class="scale-95 active:scale-90 transition-transform p-2 rounded-full text-primary dark:text-primary-fixed hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant ml-4 scale-95 active:scale-90 transition-transform cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A sophisticated close-up portrait of a user in a modern museum gallery context. Soft, diffuse lighting highlights natural features against an abstract, blurred background of classical art pieces. High editorial quality, warm color palette featuring ivory and deep indigo tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrMztU-Arw1qHI4pVp7i9wx4x3XkX0aen87cjwWzBpEQZFS9oFc-xb3ExAMdamPAg84F9GqLf5sQip7hvMVefNi6HhiZdK9IqiCwIZSssPc5E6CI4S0uAKcQ0MyRcmkjdg4P1sb99irSehqN7wx_KXVB7-nUs3gBme0WKq3xv9n2TUCrfH01nvcUO37To9cJVMGJ0KP44hi6I1RKJrZH7yFPiFZlnW8OQ9U2HkVAY7Kb-NrqWAeAIg"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-24 flex flex-col items-center text-center">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 max-w-3xl">My Cultural Journey</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">A personal archive of your explorations across time, space, and tradition. Curated moments reflecting your engagement with New Heritage.</p>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-unit w-full max-w-4xl">
+<div class="bg-surface-container p-6 rounded-lg border border-surface-container-high flex flex-col items-center justify-center text-center group hover:bg-surface-container-highest transition-colors">
+<span class="font-display-lg text-display-lg text-secondary mb-2 group-hover:scale-105 transition-transform">12</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Traditions</span>
+</div>
+<div class="bg-surface-container p-6 rounded-lg border border-surface-container-high flex flex-col items-center justify-center text-center group hover:bg-surface-container-highest transition-colors">
+<span class="font-display-lg text-display-lg text-primary mb-2 group-hover:scale-105 transition-transform">4</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Regions</span>
+</div>
+<div class="bg-surface-container p-6 rounded-lg border border-surface-container-high flex flex-col items-center justify-center text-center group hover:bg-surface-container-highest transition-colors">
+<span class="font-display-lg text-display-lg text-tertiary-container mb-2 group-hover:scale-105 transition-transform">3</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Events</span>
+</div>
+<div class="bg-surface-container p-6 rounded-lg border border-surface-container-high flex flex-col items-center justify-center text-center group hover:bg-surface-container-highest transition-colors">
+<span class="font-display-lg text-display-lg text-primary-container mb-2 group-hover:scale-105 transition-transform">8</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Artists</span>
+</div>
+</div>
+</div>
+<!-- Visual Timeline -->
+<div class="relative w-full max-w-5xl mx-auto">
+<!-- Central Line -->
+<div class="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-px bg-outline-variant -translate-x-1/2 opacity-50 z-0"></div>
+<!-- Timeline Item 1 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start mb-32 group">
+<div class="hidden md:flex w-1/2 justify-end pr-16 items-center">
+<div class="text-right">
+<span class="inline-block px-3 py-1 mb-4 border border-outline text-on-surface-variant rounded-full font-label-caps text-label-caps bg-surface/50">Discovered</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Chhau Dance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A martial tribal dance from Eastern India, characterized by vibrant masks and acrobatic movements.</p>
+</div>
+</div>
+<div class="absolute left-[24px] md:left-1/2 w-4 h-4 rounded-full border-2 border-secondary bg-surface -translate-x-1/2 mt-8 z-20 group-hover:bg-secondary transition-colors duration-300"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-16">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-surface-container-high shadow-sm group-hover:shadow-md transition-shadow">
+<img alt="Chhau Dance Discovery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A dynamic, high-contrast photograph of a traditional Chhau dancer performing a martial pose. The dancer wears a complex, vibrant mask and ornate costume. The lighting is dramatic, casting deep shadows against a minimalist, warm ivory background, evoking a modern editorial museum aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC43wZPRnZxuXv-QSm3Nic3d-n79nyByRJH65jwOQsGWhHZeWS1tzVU8IFkQiPtnlvgPL9cxXF_t-nlPBWTQU2dj2MWN1x0lkqCJBVULZp4fYlkVG5l7rqlSNc7P8vIZbAquzOu6YhKQa7OlueLA-asYkJtoYmIhMF9NAAm4XZ2uHRudR5Ztpgr6vO7CmnsRt1j2qmI4kE-LyPhnQdMjZB72Dty1FiwCrz4YR3NkNnDgA4GJmMpAal"/>
+<!-- Mobile Text (hidden on desktop) -->
+<div class="md:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
+<span class="inline-block px-3 py-1 mb-2 border border-surface-container/30 text-surface-container rounded-full font-label-caps text-label-caps backdrop-blur-sm">Discovered</span>
+<h3 class="font-headline-md text-headline-md text-surface-container">Chhau Dance</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative z-10 flex flex-col md:flex-row-reverse items-start mb-32 group">
+<div class="hidden md:flex w-1/2 justify-start pl-16 items-center">
+<div class="text-left">
+<span class="inline-block px-3 py-1 mb-4 border border-outline text-on-surface-variant rounded-full font-label-caps text-label-caps bg-surface/50">Learned</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">The Story Behind the Tradition</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exploring the narrative roots, tracing folklore back to its origins through ancient texts and modern interpretations.</p>
+</div>
+</div>
+<div class="absolute left-[24px] md:left-1/2 w-4 h-4 rounded-full border-2 border-tertiary-container bg-surface -translate-x-1/2 mt-8 z-20 group-hover:bg-tertiary-container transition-colors duration-300"></div>
+<div class="w-full md:w-1/2 pl-16 md:pr-16 md:pl-0">
+<div class="relative w-full aspect-square md:aspect-[3/4] rounded-lg overflow-hidden border border-surface-container-high bg-surface-container-low flex items-center justify-center p-8 group-hover:shadow-md transition-shadow">
+<img alt="Learning the tradition" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A close-up, beautifully lit composition of ancient, weathered manuscripts resting on a sleek, contemporary display plinth. The texture of the aged paper is sharply in focus against a deeply blurred, dark indigo background. The mood is scholarly yet premium and highly curated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-rHIRUahaSlj6KS0dlbEyR1U2qubTk-fW-BKQ2dn8tYgrjANBfnX-hfkFA9q6uGl3ypa6LW0WN81saN8DLK9PiBkcUt28R3f_R8zP-mMq8wsOXQpU9vnl0Dzx1BC1_t-CcvZWBsxx4-dtWgpDndm4UFck8GEj677IthFGZzMHwgeRbkiAL0AVmxcuujR7wqn4V2os9EXu4PwNuaJqHqZvCU-NUrtbWdEgD2enH7YlmuQ33m2jt_mc"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<!-- Mobile Text -->
+<div class="md:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
+<span class="inline-block px-3 py-1 mb-2 border border-surface-container/30 text-surface-container rounded-full font-label-caps text-label-caps backdrop-blur-sm">Learned</span>
+<h3 class="font-headline-md text-headline-md text-surface-container">The Story Behind...</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative z-10 flex flex-col md:flex-row items-start mb-32 group">
+<div class="hidden md:flex w-1/2 justify-end pr-16 items-center">
+<div class="text-right">
+<span class="inline-block px-3 py-1 mb-4 border border-outline text-on-surface-variant rounded-full font-label-caps text-label-caps bg-surface/50">Saved</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Kalamkari Textiles</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A type of hand-painted or block-printed cotton textile produced in parts of India and Iran, known for intricate natural dye patterns.</p>
+</div>
+</div>
+<div class="absolute left-[24px] md:left-1/2 w-4 h-4 rounded-full border-2 border-primary bg-surface -translate-x-1/2 mt-8 z-20 group-hover:bg-primary transition-colors duration-300"></div>
+<div class="w-full md:w-1/2 pl-16 md:pl-16">
+<div class="relative w-full aspect-video rounded-lg overflow-hidden border border-surface-container-high group-hover:shadow-md transition-shadow">
+<img alt="Kalamkari Textile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An expansive, detailed macro shot of intricate Kalamkari textile patterns. The complex organic motifs are hand-painted in rich earthy tones—terracotta, indigo, and mustard—on off-white cotton. The lighting is soft and even, typical of a high-end museum textile archive, emphasizing the weave and dye quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp6UTVDEh8I-OQCKePUHury9tlpxEPVf1wTgcT_hcanKLJLAdFuwgA6Kr0p4nVXV6beEKpZN9wBZ9_xpgy9AwFCSlbXTKTgH7vHp2NcdCKMtxIh39X_uBDzv0iDb8beUBRKTuED5UWT9cIsO5MyXc_nI3JcTz8mK4tjOd5xpe824h3I8Qk1Vr9cFIAiBFEfaejlcTxbAApKtCTWYZdbtt0NMvxebNfJDuzL4AnIMPpjXN8dSKUM_hK"/>
+<!-- Mobile Text -->
+<div class="md:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
+<span class="inline-block px-3 py-1 mb-2 border border-surface-container/30 text-surface-container rounded-full font-label-caps text-label-caps backdrop-blur-sm">Saved</span>
+<h3 class="font-headline-md text-headline-md text-surface-container">Kalamkari</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative z-10 flex flex-col md:flex-row-reverse items-start group">
+<div class="hidden md:flex w-1/2 justify-start pl-16 items-center">
+<div class="text-left">
+<span class="inline-block px-3 py-1 mb-4 border border-outline text-on-surface-variant rounded-full font-label-caps text-label-caps bg-surface/50">Experienced</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Live Workshop</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Participated in a masterclass session focused on the preservation techniques of organic pigments.</p>
+</div>
+</div>
+<div class="absolute left-[24px] md:left-1/2 w-4 h-4 rounded-full border-2 border-on-surface-variant bg-surface -translate-x-1/2 mt-8 z-20 group-hover:bg-on-surface-variant transition-colors duration-300"></div>
+<div class="w-full md:w-1/2 pl-16 md:pr-16 md:pl-0">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-surface-container-high group-hover:shadow-md transition-shadow">
+<img alt="Live Workshop Experience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A candid, warm, editorial photograph capturing an artisan's hands working with raw, vibrant natural pigments in small ceramic bowls. The setting is a bright, modern studio space with subtle architectural details in the blurred background. The overall aesthetic feels tactile, premium, and culturally rich." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEN1YozsB9w4T0tbq6byjbGChu-AywB_YksoZG0QCdYy-DS643nau6Zf6HSjBNs-7257DKupsnDoYXIy47sD6FPDMokLQ-ThiKpj9rkwATThJUEAMKNsS0-KafWoRejQCeM1dA8Qq7c6p2aXvn-3r5KtCD_VWkubiAYkSdvDEx0_u9gMXnKFO6FNQJ-pt5dargR5d8nBdCfqGg-A7fvsTfOzgwFEAPkXog7qbsyOWHcU4gCfmtXwtK"/>
+<!-- Mobile Text -->
+<div class="md:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/90 to-transparent">
+<span class="inline-block px-3 py-1 mb-2 border border-surface-container/30 text-surface-container rounded-full font-label-caps text-label-caps backdrop-blur-sm">Experienced</span>
+<h3 class="font-headline-md text-headline-md text-surface-container">Live Workshop</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Capstone Icon -->
+<div class="relative z-10 mt-24 flex justify-center">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center border-4 border-surface shadow-sm">
+<img alt="Journey Continues" class="w-10 h-10 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-primary text-primary dark:text-primary-fixed font-body-md text-body-md w-full py-16 bg-surface-container-high dark:bg-surface-container flat no shadows opacity-80 hover:opacity-100 mt-24">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter border-t border-surface-container-highest pt-8">
+<div class="mb-8 md:mb-0">
+<div class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed mb-4">Tvarita</div>
+<p class="text-on-surface-variant max-w-sm">© 2024 Tvarita Cultural Foundation. Preserving New Heritage.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Archives</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Contribute</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Legal</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary transition-all" href="#">Press</a>
+</div>
+</div>
+</footer>
+</body></html>

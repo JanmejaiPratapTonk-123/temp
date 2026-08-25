@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tvarita Admin - Art Form Requests &amp; Content CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#9d422b",
+                      "surface-container": "#f0eee9",
+                      "on-surface-variant": "#44474d",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#031632",
+                      "tertiary-fixed": "#ffdcbe",
+                      "surface": "#fbf9f4",
+                      "on-tertiary-fixed-variant": "#6a3c00",
+                      "primary-fixed-dim": "#b6c7eb",
+                      "surface-bright": "#fbf9f4",
+                      "background": "#fbf9f4",
+                      "surface-container-low": "#f5f3ee",
+                      "secondary-fixed-dim": "#ffb4a2",
+                      "on-secondary-fixed-variant": "#7e2b16",
+                      "on-tertiary-fixed": "#2d1600",
+                      "surface-dim": "#dbdad5",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e4e2dd",
+                      "surface-variant": "#e4e2dd",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#374765",
+                      "on-tertiary-container": "#cc822f",
+                      "on-secondary-container": "#74240f",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4e5f7e",
+                      "on-primary-fixed": "#081b38",
+                      "outline-variant": "#c5c6ce",
+                      "on-background": "#1b1c19",
+                      "on-error-container": "#93000a",
+                      "outline": "#75777e",
+                      "primary-fixed": "#d7e2ff",
+                      "primary-container": "#1a2b48",
+                      "tertiary-fixed-dim": "#ffb871",
+                      "inverse-surface": "#30312e",
+                      "on-surface": "#1b1c19",
+                      "secondary-fixed": "#ffdbd2",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#261200",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#fd8c6f",
+                      "on-primary-container": "#8293b5",
+                      "inverse-primary": "#b6c7eb",
+                      "tertiary-container": "#432400",
+                      "on-secondary-fixed": "#3c0800",
+                      "surface-container-high": "#eae8e3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "container-max": "1440px",
+                      "gutter": "32px",
+                      "unit": "8px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "ebGaramond"
+                      ],
+                      "body-lg": [
+                              "plusJakartaSans"
+                      ],
+                      "label-caps": [
+                              "plusJakartaSans"
+                      ],
+                      "button": [
+                              "plusJakartaSans"
+                      ],
+                      "headline-lg-mobile": [
+                              "ebGaramond"
+                      ],
+                      "headline-md": [
+                              "ebGaramond"
+                      ],
+                      "body-md": [
+                              "plusJakartaSans"
+                      ],
+                      "headline-lg": [
+                              "ebGaramond"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.surface'); }
+        /* Micro-interactions */
+        .hover-scale { transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+        .hover-scale:hover { transform: scale(1.02); }
+        .form-input-bottom-border {
+            border: none;
+            border-bottom: 1px solid theme('colors.outline');
+            background: transparent;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            transition: border-color 0.2s;
+        }
+        .form-input-bottom-border:focus {
+            box-shadow: none;
+            border-bottom-color: theme('colors.secondary');
+        }
+        .ai-draft-bg {
+            background-image: linear-gradient(135deg, rgba(234,232,227,0.5) 0%, rgba(251,249,244,1) 100%);
+            border: 1px dashed theme('colors.outline-variant');
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased overflow-x-hidden flex h-screen">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-surface-container shadow-sm flex flex-col gap-unit p-4 z-40 hidden md:flex border-r border-surface-container-low">
+<div class="mb-8 flex flex-col items-center pt-4">
+<img alt="Tvarita Admin" class="w-16 h-16 rounded-full object-cover mb-4 shadow-sm border border-surface-container-high bg-white p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Tvarita Admin</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Cultural Curator</p>
+</div>
+<div class="flex-1 overflow-y-auto w-full">
+<ul class="flex flex-col gap-2 w-full">
+<!-- Overview -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="font-body-md text-body-md">Overview</span>
+</a>
+</li>
+<!-- Content (Active Context for drafting) -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">description</span>
+<span class="font-body-md text-body-md">Content</span>
+</a>
+</li>
+<!-- Art Forms -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">palette</span>
+<span class="font-body-md text-body-md">Art Forms</span>
+</a>
+</li>
+<!-- Artists -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person_4</span>
+<span class="font-body-md text-body-md">Artists</span>
+</a>
+</li>
+<!-- Events -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">event</span>
+<span class="font-body-md text-body-md">Events</span>
+</a>
+</li>
+<!-- Requests (ACTIVE) -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full bg-secondary text-on-secondary hover:bg-secondary/90 transition-all translate-x-1 duration-200 shadow-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">draw</span>
+<span class="font-body-md text-body-md font-medium">Requests</span>
+</a>
+</li>
+<!-- Emails -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+<span class="font-body-md text-body-md">Emails</span>
+</a>
+</li>
+<!-- Fairness -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">balance</span>
+<span class="font-body-md text-body-md">Fairness</span>
+</a>
+</li>
+<!-- Settings -->
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 bg-surface min-h-screen overflow-y-auto">
+<!-- Top App Bar (Mobile Nav + Context) -->
+<header class="sticky top-0 z-30 bg-surface/80 backdrop-blur-md px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center border-b border-transparent">
+<div class="flex items-center gap-4 md:hidden">
+<button class="text-primary p-2 -ml-2 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<h1 class="font-display-lg text-headline-md md:text-headline-lg text-primary font-bold tracking-tight hidden md:block">Request Management</h1>
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight md:hidden">Requests</h1>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border border-surface"></span>
+</button>
+</div>
+</header>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12 flex flex-col gap-12">
+<!-- Layout Grid: 7-col / 5-col split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column (7 cols): Requests Table & Detail -->
+<div class="lg:col-span-7 flex flex-col gap-10">
+<!-- Table Section -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-container-high overflow-hidden">
+<div class="p-6 border-b border-surface-container-high flex justify-between items-center bg-surface-container-lowest">
+<h2 class="font-display-lg text-headline-md text-primary">Pending Art Forms</h2>
+<div class="flex gap-2">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1"><span class="material-symbols-outlined">filter_list</span></button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1"><span class="material-symbols-outlined">sort</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps border-b border-surface-container-high">
+<th class="py-4 px-6 font-medium">Suggested Art Form</th>
+<th class="py-4 px-6 font-medium">Region</th>
+<th class="py-4 px-6 font-medium">Submitted By</th>
+<th class="py-4 px-6 font-medium">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-surface-container-high">
+<!-- Row 1 (Active) -->
+<tr class="hover:bg-surface-container-lowest transition-colors cursor-pointer bg-surface-container-lowest relative group">
+<td class="py-4 px-6 font-medium text-primary">Kalamkari Textiles</td>
+<td class="py-4 px-6 text-on-surface-variant">Andhra Pradesh</td>
+<td class="py-4 px-6 text-on-surface-variant">@artisan_weaver</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant border border-tertiary-fixed-dim">
+                                                Reviewing
+                                            </span>
+</td>
+<!-- Absolute indicator for active row -->
+<td class="absolute left-0 top-0 bottom-0 w-1 bg-secondary rounded-r-sm"></td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-4 px-6">Dhokra Metal Casting</td>
+<td class="py-4 px-6 text-on-surface-variant">Odisha</td>
+<td class="py-4 px-6 text-on-surface-variant">@craft_scholar</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface-variant">
+                                                New
+                                            </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-4 px-6">Pattachitra Paintings</td>
+<td class="py-4 px-6 text-on-surface-variant">West Bengal</td>
+<td class="py-4 px-6 text-on-surface-variant">@heritage_trust</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface-variant">
+                                                New
+                                            </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Request Review Detail Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-container-high p-8 relative overflow-hidden flex flex-col gap-6">
+<!-- Decorative bg element -->
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-surface-container rounded-full opacity-50 blur-3xl pointer-events-none"></div>
+<div class="flex justify-between items-start z-10">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest mb-2 block">Review Detail</span>
+<h3 class="font-display-lg text-headline-lg text-primary font-medium leading-tight mb-1">Kalamkari Textiles</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> Andhra Pradesh &amp; Telangana
+                                </p>
+</div>
+<div class="text-right text-sm text-on-surface-variant">
+<p>Submitted: Oct 24, 2024</p>
+<p>By: <a class="text-primary hover:underline" href="#">@artisan_weaver</a></p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 z-10">
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-2 border-b border-surface-container-high pb-1 inline-block">Description</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    A type of hand-painted or block-printed cotton textile produced in Isfahan, Iran, and in the Indian state of Andhra Pradesh. Only natural dyes are used in Kalamkari, which involves twenty-three steps. I believe this needs a dedicated gallery on Tvarita highlighting the Srikalahasti style specifically, as it focuses on Hindu mythology.
+                                </p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-2 border-b border-surface-container-high pb-1 inline-block">Provided Sources</h4>
+<ul class="font-body-md text-body-md text-primary flex flex-col gap-2">
+<li><a class="hover:underline flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">link</span> Craft Council of India Report 2022</a></li>
+<li><a class="hover:underline flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">image</span> Attachments (3 images)</a></li>
+</ul>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 mt-4 pt-6 border-t border-surface-container-high z-10">
+<button class="bg-primary text-on-primary font-button text-button px-6 py-3 rounded-full hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                APPROVE &amp; ADD
+                            </button>
+<button class="bg-transparent text-primary font-button text-button px-6 py-3 rounded-full border-[1.5px] border-primary hover:bg-surface-container-low transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+                                REQUEST MORE INFO
+                            </button>
+<div class="flex-grow"></div>
+<button class="text-on-surface-variant font-button text-button px-4 py-3 hover:text-error transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">delete</span>
+                                IGNORE
+                            </button>
+</div>
+</section>
+</div>
+<!-- Right Column (5 cols): Content CMS (Drafting) -->
+<div class="lg:col-span-5">
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-surface-container-high p-6 md:p-8 sticky top-24">
+<div class="flex items-center gap-3 mb-6 border-b border-surface-container-high pb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">edit_document</span>
+<h2 class="font-display-lg text-headline-md text-primary">Content CMS</h2>
+</div>
+<form class="flex flex-col gap-6">
+<!-- Select Art Form -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="art-form-select">Target Art Form</label>
+<select class="form-input-bottom-border font-body-md text-body-md text-primary w-full py-2 focus:ring-0 focus:outline-none bg-transparent appearance-none cursor-pointer" id="art-form-select">
+<option selected="" value="kalamkari">Kalamkari Textiles (Drafting)</option>
+<option value="dhokra">Dhokra Metal Casting</option>
+<option value="pattachitra">Pattachitra Paintings</option>
+</select>
+<!-- Custom dropdown arrow hack for minimal style -->
+<div class="relative w-full h-0 pointer-events-none -mt-7 flex justify-end">
+<span class="material-symbols-outlined text-on-surface-variant mr-2">arrow_drop_down</span>
+</div>
+</div>
+<!-- Post Title -->
+<div class="flex flex-col gap-1 mt-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider" for="post-title">Post Title</label>
+<input class="form-input-bottom-border font-display-lg text-headline-md text-primary w-full py-2 focus:ring-0 placeholder:text-surface-dim" id="post-title" placeholder="Enter an engaging title..." type="text"/>
+</div>
+<!-- Media Upload (Bento style block) -->
+<div class="flex flex-col gap-2 mt-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Cover Media</label>
+<div class="h-32 rounded-lg border-2 border-dashed border-outline-variant bg-surface-container-low flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container-high transition-colors hover-scale group relative overflow-hidden">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-3xl mb-2">add_photo_alternate</span>
+<span class="font-body-md text-sm text-on-surface-variant group-hover:text-primary transition-colors">Click to Upload Media</span>
+</div>
+</div>
+<!-- AI Draft Section -->
+<div class="mt-4 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">auto_awesome</span> Content Body
+                                    </label>
+<button class="text-xs font-button text-secondary hover:underline flex items-center gap-1" type="button">
+                                        Generate Draft <span class="material-symbols-outlined text-[14px]">bolt</span>
+</button>
+</div>
+<div class="relative">
+<textarea class="w-full rounded-lg border border-outline-variant bg-surface-container-lowest p-4 font-body-md text-body-md text-on-surface focus:ring-1 focus:ring-secondary focus:border-secondary resize-y ai-draft-bg" placeholder="Start writing or generate an AI draft based on request info..." rows="8"></textarea>
+<!-- Draft Badge -->
+<div class="absolute top-3 right-3 bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-1 rounded text-xs font-label-caps tracking-widest border border-tertiary-fixed-dim flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">edit_note</span> AI DRAFT
+                                    </div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-4 mt-4">
+<button class="text-on-surface-variant font-button text-button px-4 py-2 hover:text-primary transition-colors border-b border-transparent hover:border-primary" type="button">
+                                    Save Draft
+                                </button>
+<button class="bg-primary text-on-primary font-button text-button px-8 py-3 rounded-full hover:bg-primary-container transition-colors shadow-sm" type="submit">
+                                    Publish
+                                </button>
+</div>
+</form>
+</section>
+</div>
+</div>
+</div>
+</main>
+</body></html>

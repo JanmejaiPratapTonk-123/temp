@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exposure Fairness - Tvarita Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#9d422b",
+                        "surface-container": "#f0eee9",
+                        "on-surface-variant": "#44474d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#031632",
+                        "tertiary-fixed": "#ffdcbe",
+                        "surface": "#fbf9f4",
+                        "on-tertiary-fixed-variant": "#6a3c00",
+                        "primary-fixed-dim": "#b6c7eb",
+                        "surface-bright": "#fbf9f4",
+                        "background": "#fbf9f4",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-fixed-dim": "#ffb4a2",
+                        "on-secondary-fixed-variant": "#7e2b16",
+                        "on-tertiary-fixed": "#2d1600",
+                        "surface-dim": "#dbdad5",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e4e2dd",
+                        "surface-variant": "#e4e2dd",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#374765",
+                        "on-tertiary-container": "#cc822f",
+                        "on-secondary-container": "#74240f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4e5f7e",
+                        "on-primary-fixed": "#081b38",
+                        "outline-variant": "#c5c6ce",
+                        "on-background": "#1b1c19",
+                        "on-error-container": "#93000a",
+                        "outline": "#75777e",
+                        "primary-fixed": "#d7e2ff",
+                        "primary-container": "#1a2b48",
+                        "tertiary-fixed-dim": "#ffb871",
+                        "inverse-surface": "#30312e",
+                        "on-surface": "#1b1c19",
+                        "secondary-fixed": "#ffdbd2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#261200",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fd8c6f",
+                        "on-primary-container": "#8293b5",
+                        "inverse-primary": "#b6c7eb",
+                        "tertiary-container": "#432400",
+                        "on-secondary-fixed": "#3c0800",
+                        "surface-container-high": "#eae8e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-caps": ["Plus Jakarta Sans", "sans-serif"],
+                        "button": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "1.0", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+</head>
+<body class="flex bg-background font-body-md text-body-md min-h-screen antialiased">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-surface-container bg-surface-container-low shadow-sm z-50 flex flex-col hidden md:flex">
+<div class="p-6 pb-2 border-b border-surface-container-highest">
+<div class="flex items-center gap-4 mb-8">
+<img alt="Tvarita Admin" class="w-12 h-12 rounded-full object-cover bg-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA33_RBhk47Fj0FFol2zwARMoJ0r3QWdyFNCG-KqsMf6_77JO6fM8bOqrIjtRBbyzgs1BtVoNWSavMPtC2H5jTVC4o-mIb9-5z6ZfoNcBTwHBXH4PHV9936ppmOIHVVizGDa6Omk29yGJ5PMK3i8eUz7khjURVnFpvqhPI0rb6Jq_yyZhMBMgTKzur4CQlVaA_Im4-QaM9lW7XXWHWcXuPLObSfkGOYN71lFsOxAa3df4Xt8jEmi2AR"/>
+<div>
+<h2 class="font-display-lg text-headline-md text-primary" style="font-size: 24px;">Tvarita Admin</h2>
+<p class="text-on-surface-variant font-label-caps text-label-caps mt-1">Cultural Curator</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-unit p-4 flex-1 overflow-y-auto">
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Content</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span>Art Forms</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person_4">person_4</span>
+<span>Artists</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span>Events</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="draw">draw</span>
+<span>Requests</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span>Emails</span>
+</a>
+<a class="flex items-center gap-4 p-3 bg-secondary text-on-secondary rounded-full translate-x-1 duration-200 shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="balance">balance</span>
+<span>Fairness</span>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-full text-on-surface-variant hover:bg-surface-container-highest transition-all translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop w-full max-w-container-max mx-auto transition-all duration-300">
+<!-- Header -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Exposure Fairness</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Is every tradition getting a chance to be discovered?</p>
+</div>
+<button class="bg-primary text-on-primary font-button text-button py-3 px-6 rounded-full hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2 w-fit">
+<span class="material-symbols-outlined" style="font-size: 18px;">refresh</span>
+                Simulate discovery refresh
+            </button>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Chart Area -->
+<section class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-8 border border-surface-container-high shadow-sm relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" data-icon="donut_large">donut_large</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-8 relative z-10">Visibility Distribution</h3>
+<!-- Mock Chart Visuals - CSS Driven -->
+<div class="flex flex-col gap-6 relative z-10 mb-8">
+<!-- Bar 1 -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps mb-2 text-primary">
+<span>Chhau Dance</span>
+<span>18%</span>
+</div>
+<div class="w-full bg-surface-container h-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<!-- Bar 2 -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps mb-2 text-primary">
+<span>Kalamkari Art</span>
+<span>15%</span>
+</div>
+<div class="w-full bg-surface-container h-4 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 15%;"></div>
+</div>
+</div>
+<!-- Bar 3 -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps mb-2 text-primary">
+<span>Dhrupad Music</span>
+<span>12%</span>
+</div>
+<div class="w-full bg-surface-container h-4 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+<!-- Bar 4 -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps mb-2 text-secondary">
+<span>Baul Singers</span>
+<span>5%</span>
+</div>
+<div class="w-full bg-surface-container h-4 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 5%;"></div>
+</div>
+</div>
+<!-- Bar 5 -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps mb-2 text-secondary">
+<span>Pattachitra</span>
+<span>3%</span>
+</div>
+<div class="w-full bg-surface-container h-4 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 3%;"></div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 pt-6 border-t border-surface-container-high">
+<span class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-primary block"></span> High Concentration
+                     </span>
+<span class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim block"></span> Healthy
+                     </span>
+<span class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-secondary block"></span> Needs Attention
+                     </span>
+</div>
+</section>
+<!-- Secondary Metrics Column -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Status Card -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-surface-container-high shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 text-xl">System Status</h3>
+<p class="text-on-surface-variant text-sm mb-6">Algorithm equilibrium index</p>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="warning" style="font-size: 32px;">warning</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-error text-2xl">Needs Attention</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1">High variance detected</p>
+</div>
+</div>
+</section>
+<!-- Under-represented List -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-surface-container-high shadow-sm flex-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-6 text-xl">Traditions Needing Visibility</h3>
+<ul class="flex flex-col gap-4">
+<li class="flex items-center justify-between p-3 rounded-lg hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<p class="font-button text-button text-primary">Baul Singers</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1 text-[10px]">Music • Bengal</p>
+</div>
+</div>
+<span class="text-secondary font-label-caps text-label-caps">5% Share</span>
+</li>
+<li class="flex items-center justify-between p-3 rounded-lg hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="brush">brush</span>
+</div>
+<div>
+<p class="font-button text-button text-primary">Pattachitra</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1 text-[10px]">Art • Odisha</p>
+</div>
+</div>
+<span class="text-secondary font-label-caps text-label-caps">3% Share</span>
+</li>
+<li class="flex items-center justify-between p-3 rounded-lg hover:bg-surface-container transition-colors group cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="accessibility_new">accessibility_new</span>
+</div>
+<div>
+<p class="font-button text-button text-primary">Yakshagana</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-1 text-[10px]">Theatre • Karnataka</p>
+</div>
+</div>
+<span class="text-secondary font-label-caps text-label-caps">2% Share</span>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</main>
+</body></html>
