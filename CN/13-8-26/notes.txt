@@ -1,0 +1,39 @@
+Step 1: 
+Configure the DHCP Server
+You need to create two separate IP pools on the single DHCP Server—one for each LAN.
+----------------------------------------------------------------------------------
+Click on the Server-PT (DHCP) -> Go to the Services tab -> Select DHCP.
+Turn the DHCP service ON.
+Edit the default pool (or create a new one) for LAN 1 (Left Side):
+Pool Name: LAN1_Pool
+Default Gateway: [Enter Router2's Left Interface IP]
+Start IP Address: [Enter the starting IP for the left network]
+Click Save or Add.
+----------------------------------------------------------------------------------
+Create a second pool for LAN 2 (Right Side):
+Pool Name: LAN2_Pool
+Default Gateway: [Enter Router2's Right Interface IP]
+Start IP Address: [Enter the starting IP for the right network]
+Click Add.
+
+
+Step 2: Configure Router2 (The Crucial Step)
+You must assign IP addresses to the router interfaces and configure the IP helper address on
+the interface facing the right LAN so it knows where to send DHCP requests.
+
+Click on Router2, go to the CLI tab, and enter the following commands:
+textRouter> enable
+Router# configure terminal
+
+------------- Configure the Left Interface (Facing the DHCP Server)--------------
+Router(config)# interface [Left_Interface_Name, e.g., gig0/0 or fa0/0]
+Router(config-if)# ip address [Left_Gateway_IP] [Subnet_Mask]
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+--------------Configure the Right Interface (Facing LAN 2)-----------------------
+Router(config)# interface [Right_Interface_Name, e.g., gig0/1 or fa0/1]
+Router(config-if)# ip address [Right_Gateway_IP] [Subnet_Mask]
+Router(config-if)# ip helper-address [IP_Address_of_DHCP_Server]
+Router(config-if)# no shutdown
+Router(config-if)# exit
