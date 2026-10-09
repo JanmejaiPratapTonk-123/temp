@@ -1,0 +1,29 @@
+-SHARED MEMORY
+
+Shared memory is a method of inter-process communication where multiple processes can access the same reason for physical memory. 
+It allows cooperating process to exchange data by reading and writing to a common memory segment, 
+making it one of the fastest IPC mechanism available. 
+In shared memory system, processes communicate by establishing a shared memory region in their address space. 
+When one process wants to share data, it creates the shared reason and stores the information there. Other processes can then attach to this shared memory segment to read or modify the data. 
+
+-FUNCTIONS USED IN SHARED MEMORY
+
+The problem with PIPE, FIFO and Message Queue is that for two processes to exchange information, the information has to go through the kernel.
+
+1. Server reads from the input file.
+2. Server write the data in a message using either a PIPE, FIFO or Message Queue.
+3. The client reads the data from the IPC channel, again requiring the data to be copied from kernel's IPC buffer to the client buffer.
+4. Finally the data is copied from the client's buffer.
+
+A total of four copies of the data required (two for read, two for write operation).
+So shared memory provides a way by letting two or more processes share a memory segment. 
+With shared memory the data is only copied twice, from input file into shared memory and from shared memory to output file.
+
+
+-System calls
+
+1. ftok(): To generate unique keys.
+2. shmget(): When successful, provide identifier of shared memory.
+3. shmat(): Attach
+4. shmdt(): When you are done with shared memory segment, your program should detach itself from it using this particular system call.
+5. shmctl(): When you detach from shared memory the message should not be destroyed. So to destroy the message we use this.
