@@ -1,10 +1,10 @@
 -SHARED MEMORY
 
-Shared memory is a method of inter-process communication where multiple processes can access the same reason for physical memory. 
-It allows cooperating process to exchange data by reading and writing to a common memory segment, 
+Shared memory is a method of inter-process communication where multiple processes can access the same region of physical memory. 
+It allows cooperating processes to exchange data by reading and writing to a common memory segment, 
 making it one of the fastest IPC mechanism available. 
 In shared memory system, processes communicate by establishing a shared memory region in their address space. 
-When one process wants to share data, it creates the shared reason and stores the information there. Other processes can then attach to this shared memory segment to read or modify the data. 
+When one process wants to share data, it creates the shared region and stores the information there. Other processes can then attach to this shared memory segment to read or modify the data. 
 
 -FUNCTIONS USED IN SHARED MEMORY
 
@@ -27,3 +27,15 @@ With shared memory the data is only copied twice, from input file into shared me
 3. shmat(): Attach
 4. shmdt(): When you are done with shared memory segment, your program should detach itself from it using this particular system call.
 5. shmctl(): When you detach from shared memory the message should not be destroyed. So to destroy the message we use this.
+
+-Compilation and execution
+
+This program uses System V shared memory, which is available on Linux and Unix-like
+systems. Run it in Linux, WSL, or a Linux virtual machine:
+
+    gcc -Wall -Wextra -std=c11 shared_memory.c -o shared_memory
+    ./shared_memory
+
+The parent process creates and writes to the shared memory segment. The child process
+attaches to the same segment, reads the message, and then detaches. Finally, the parent
+removes the segment with shmctl().
