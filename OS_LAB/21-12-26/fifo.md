@@ -1,0 +1,1 @@
+1. FIFO suffers Belady's Anomaly.
