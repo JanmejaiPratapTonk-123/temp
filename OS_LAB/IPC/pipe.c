@@ -37,7 +37,7 @@ int main()
         {
             buffer[byte] = '\0';
             printf("Parent read:\n%s", buffer);
-            printf("Byte transfered: %zd\n", byte);
+            printf("Byte read: %zd\n", byte);
         }
         close(fd[0]);
         wait(NULL);
