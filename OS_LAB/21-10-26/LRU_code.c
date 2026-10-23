@@ -3,7 +3,7 @@
 
 int main()
 {
-    int hits;
+    int hits = 0;
 
     int n;
     printf("Enter size of reference string: ");
@@ -12,6 +12,12 @@ int main()
     int page_size;
     printf("Enter page size: ");
     scanf("%d", &page_size);
+
+    if (n <= 0 || page_size <= 0)
+    {
+        printf("Invalid size\n");
+        return 1;
+    }
 
     int frames[page_size];
     int last_used[page_size];
